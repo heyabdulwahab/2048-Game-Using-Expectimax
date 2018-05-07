@@ -60,5 +60,5 @@ Writing the artificial intelligence was quite a lot of fun, and I learnt a lot d
 Regards, 
 Abdul Wahab
 
-## Donations
-I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: 1Gsq2zYnz9JsoMyCsckTz9S9MjGcnsGrSs Thank you very much!
+# Donations
+I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my **BTC address: 1Gsq2zYnz9JsoMyCsckTz9S9MjGcnsGrSs** Thank you very much!
