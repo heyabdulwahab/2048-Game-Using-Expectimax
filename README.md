@@ -14,6 +14,7 @@ I used a depth bounded expectimax search to write the AI. At every turn, the AI 
 <p align="center">
   <img src="http://iamkush.me/content/images/2015/10/CodeCogsEqn--1-.gif" alt="Screenshot"/>
 </p>
+
 The **max node** is the one in which the **player chooses a move** (out of the four directions), and the **chance node** is the one in which the **board inserts a random tile**. The max node decides the correct move by maximising the score of its children, which are the chance nodes.
 
 Due to space and time restrictions, it is obviously not possible to explore the complete search space. The **search is bounded by a depth**, at which the AI **evaluates the score of the state** (the leaf node) using some heuristic.
