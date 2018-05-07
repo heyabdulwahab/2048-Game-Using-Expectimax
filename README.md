@@ -29,11 +29,33 @@ I used a combination of two heuristics to evaluate how **good** a state was.
   ### 2. Forming clusters of equal valued tiles
   It is obviously better for us if more tiles get merged. This happens if in a state two same valued tiles are present next to each other.
   I calculate another value, a **penalty**, and subtract it from the score calculated from heuristic one. 
+  
   This penalty becomes large when high value tiles are scattered across the grid, hence indicating that that particular state is bad.
   
+## Optimisations of search
+As far as I know, there is no method to prune an expectimax search. The only way out is to avoid exploring branches that are highly improbable, however this has no use for us as each branch has an equal probability (the new tile has equal probability of popping up on any of the empty tiles).
 
+Initially I was exploring nodes even if the move played by the PLAYER had no effect on the grid (i.e. the grid was stuck and could not move in a particular direction, which is a common occurrence during gameplay). Eliminating such branches did enhance the performance a bit.
+
+## Performance of the AI
+The solver performs quite well. With a **search depth of 6**, it formed the 2048 tile **9 times out of 10.** With a **search depth of 8, it formed the 2048 tile every time** I tested it, and went on to 4096 every time as well.
+
+For a better winning rate, and taking the time taken to search per move into consideration, I keep a 8 ply lookahead if the number of empty tiles in the grid is less than 4, otherwise a 6 ply lookahead. This combination leads to a win every time, and 8 out of 10 times forms the 4096 tile.
+
+**The AI achieved a best score of 177352, reaching the 8192 tile. The average score was around 40000, and the AI always won the game.**
 
 ## Screenshot
+I forgot to take the screenshot of the best run, but a closer one's here.
+
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png" alt="Screenshot"/>
+  <img src="http://iamkush.me/content/images/2015/11/Screen-Shot-2015-11-03-at-3-21-44-am-1.png" alt="Screenshot"/>
 </p>
+
+Each move takes anywhere from 10ms to 200ms, depending upon the search space and how complex the grid is at that moment. The version here has a timeout function, calling the AI to find the next move every 50 ms.
+
+It can perform better if the search depth is more, however that would make it quite slow. The fact that the code is in javascript doesn't makes things any better :D. 
+
+Writing the artificial intelligence was quite a lot of fun, and I learnt a lot during the process. Do let me know what you think about it in the comments section!
+
+Regards, 
+Abdul Wahab
