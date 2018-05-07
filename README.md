@@ -58,8 +58,7 @@ It can perform better if the search depth is more, however that would make it qu
 Writing the artificial intelligence was quite a lot of fun, and I learnt a lot during the process. Do let me know what you think about it in the comments section!
 
 Regards, 
-
 Abdul Wahab
 
 ## Donations
-I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: 1Gsq2zYnz9JsoMyCsckTz9S9MjGcnsGrSs. Thank you very much!
+I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: 1Gsq2zYnz9JsoMyCsckTz9S9MjGcnsGrSs Thank you very much!
